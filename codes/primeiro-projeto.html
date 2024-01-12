@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Projeto</title>
+</head>
+<body>
+    <h1>Primeiros Passos com HTML</h1>
+    <hr/>
+
+    <h2 id="indice">Índice</h2>
+    <ul>
+        <li><a href="#histComputer">História dos computadores</a></li>
+        <ul>
+            <li><a href="#coputer">Primeiros Computadores</a></li>
+            <ul>
+                <li><a href="#1gen">1° Geração</a></li>
+                <li><a href="#2gen">2° Geração</a></li>
+                <li><a href="#3gen">3° Geração</a></li>
+                <li><a href="#4gen">4° Geração</a></li>
+                <li><a href="#5gen">5° Geração</a></li>
+            </ul>
+            <li><a href="#internet">Internet como surgiu</a></li>
+            <li><a href="#nomes">Grandes Nomes</a></li>
+        </ul>
+        <li><a href="#qClientes">O que são <i>Clients</i>?</a></li>
+        <ul>
+            <li><a href="#clienteWeb">Cliente na Web</a></li>
+            <li><a href="#navegador">Navegadores</a></li>
+            <li><a href="#appWeb">Aplicação web</a></li>
+            <li><a href="#mobile">Dispositivos Móveis</a></li>
+        </ul>
+        <li><a href="#servidor">O que são <i>Servers</i>?</a></li>
+        <ul>
+            <li><a href="#soft">Software</a></li>
+            <li><a href="#tipos">Tipos de servidores</a></li>
+            <ul>
+                <li><a href="#proxy">Proxy/a></li>
+                <li><a href="#firewall">Firewall</a></li>
+                <li><a href="#webServer">Web server</a></li>
+                <li><a href="#mailServer">Mail server</a></li>
+                <li><a href="#dbServer">Database Server</a></li>
+                <li><a href="#dns">DNS</a></li>
+            </ul>
+            <li><a href="#hospedagem">Hospedagem de site</a></li>
+        </ul>
+        <li><a href="#linguagem">Linguagem de programação</a></li>
+        <ul>
+            <li><a href="#qlinguagem">O que é</a></li>
+            <li><a href="#linguagemServer">Server-side</a></li>
+            <li><a href="#linguagemCliente">Client-side</a></li>
+        </ul>
+        <li><a href="#ferramentas">Ferramentas</a>
+            <ul>
+                <li><a href="#notepad">Notepad++</a></li>
+                <li><a href="#sublime">Sublime Text</a></li>
+                <li><a href="#code">Visual Studio Code</a></li>
+            </ul>
+        </li>
+        <li><a href="#estrutura">Estrutura Básica do HTML</a></li>
+        <li><a href="#tags">Falando sobre tags</a></li>
+        <ul>
+            <li><a href="#atributos"></a></li>
+        </ul>
+    </ul>
+
+    <h1 id="histComputer"> História dos computadores </h1>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <h2 id="coputer">Primeiros Computadores</h2>
+
+    <h3 id="1gen">1ª Geração</h3>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <ul>
+        <li>
+            Harvard Mark I (1944): computador eletromecânico baseado em válvulas, era basicamente uma máquina de calcular;
+        </li>
+        <li>
+            Colossus (1946): criado para cálculos e criptoanálise na Alemanha;
+        </li>
+        <li>
+            <abbr title="Electronic Numerical Integrator and Computer">ENIAC</abbr> (1946): em contrapartida ao Colossus, os EUA tinham o <abbr title="Electronic Numerical Integrator and Computer">ENIAC</abbr>, que era mais automatizado que os outros computadores;
+        </li>
+        <li>
+            Nesta época de 1946, surgiu o termo "bug", pois a temperatura dos computadores era alta, atraindo insetos.
+        </li>
+    </ul>
+
+    <h3 id="2gen">2ª Geração (1959 - 1965)</h3>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <ul>
+        <li>
+            Evolução das válvulas para os transistores; esta evolução causou a diminuição do tamanho dos computadores.
+        </li>
+    </ul>
+
+    <h3 id="3gen">3ª Geração (1965 - 1970)</h3>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <ul>
+        <li>
+            Desenvolvimento dos circuitos integrados (chips) que diminuíram ainda mais os computadores.
+        </li>
+    </ul>
+
+    <h3 id="4gen">4ª Geração (a partir de 1971)</h3>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <ul>
+        <li>
+            Evolução dos circuitos e surgimento e popularização dos <abbr title="Personal Computers">PCs</abbr>.
+        </li>
+    </ul>
+
+    <h3 id="5gen">5ª Geração</h3>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <ul>
+        <li>
+            <abbr title="Inteligência Artificial">IA</abbr>, Metaverso, Computadores Quânticos e Bitcoin.
+        </li>
+    </ul>
+
+    <h2 id="internet">Internet como surgiu</h2>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <p>
+        A internet e os computadores evoluíram de forma paralela; podemos dizer que a internet está ligada principalmente à comunicação. 
+
+        Um dos principais instrumentos de comunicação foi o telégrafo, que usava código morse como forma de transmitir uma mensagem.
+
+        Na década de 50, no período da Guerra Fria, a disputa entre **USA** e **URSS** causou a explosão da tecnologia. Desse período surgiu a <abbr title="Defense Advanced Research Projects Agency">DARPA</abbr>, que tinha por objetivo manter a superioridade tecnológica dos EUA.
+
+        Joseph Carl Robnett Licklider "plantou" a semente na <abbr title="Defense Advanced Research Projects Agency">DARPA</abbr> ao teorizar sobre uma rede de computadores se comunicando em diferentes localizações.
+
+        Depois de alguns avanços e evoluções, surgiu a <abbr title="Advanced Research Projects Agency Network">ARPANET</abbr> , que era um sistema de comunicação em pacotes. A primeira conexão aconteceu em 1969, que foi uma comunicação entre a <abbr title="University of California">UCL</abbr> e o <abbr title="Stanford Research Institute">SRI</abbr>, a mensagem era **LOGIN**, mas o que chegou do outro lado foi **LO**.
+
+        A <abbr title="Advanced Research Projects Agency Network">ARPANET</abbr> evoluiu e ganhou outros pontos (nós), e Vinton Cerf e Robert Kahn criaram o protocolo <abbr title="Transmission Control Protocol/Internet Protocol">TCP/IP</abbr>, o que deu mais robustez e deu origem a microredes especializadas.
+
+        Em 1989, Tim Berners-Lee uniu o <abbr title="Transmission Control Protocol/Internet Protocol">TCP/IP</abbr> e hipertexto para desenvolver a <abbr title="World Wide Web">WWW</abbr>, e o primeiro site foi o "info.cern.ch".
+    </p>
+
+    <h2 id="nomes">Grandes Nomes</h2>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <ul>
+        <li>
+            Grace Murray Hopper: Foi uma das primeiras programadoras do Mark I, criou a linguagem de alto nível Flow-Matic (base do COBOL) e deu origem ao termo "bug".
+        </li>
+        <li>
+            Joseph Carl Robnett Licklider: Teorizou sobre uma rede de computadores e, por esta teoria, foi recrutado pela <abbr title="Defense Advanced Research Projects Agency">DARPA</abbr>. Plantou a semente da comunicação dando a ideia de conectar dois computadores em pontos distintos.
+        </li>
+        <li>
+            Robert E. Kahn: Junto de Vinton Cerf, criou o <abbr title="Transmission Control Protocol/Internet Protocol">TCP/IP</abbr> e ainda apresentou o primeiro e-mail.
+        </li>
+        <li>
+            Tim Berners-Lee: Foi o inventor da <abbr title="World Wide Web">WWW</abbr>, diretor do <abbr title="World Wide Web">WWW</abbr> Consortium, popularizou o HTTP e o HTML.
+        </li>
+        <li>
+            Marc Andreessen: Reinventou o navegador com o Netscape baseado no Mosaic e tornou o navegador amigável com recursos gráficos.
+        </li>
+        <li>
+            Bill Gates: Fundador da Microsoft, a equipe da Microsoft desenvolveu o navegador Explorer que tornou a internet acessível a todos os computadores.
+        </li>
+        <li>
+            Steve Jobs: Fundador da Apple, popularizou o smartphone que conhecemos hoje.
+        </li>
+    </ul>
+
+    <h1 id="qClientes">O  que são clientes</h1>
+    <small><a href="#indice">(↑ voltar)</a></small>
+
+    <h2 id="clienteWeb">Cliente na Web</h2>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <p>
+        O cliente é o dispositivo que está comunicando uma informação da internet, a qual está presente em outro computador (Servidor). O cliente vai para a internet, que busca arquivos como HTML, CSS, JavaScript, imagens, entre outros, no servidor que retorna ao cliente os arquivos que ficam armazenados na máquina na forma de cache. Os usuários utilizam uma grande quantidade de dispositivos que possuem tamanhos diferentes, o que torna importante levar em consideração o desenvolvimento de um design responsivo. Outro ponto para levar em consideração é a compatibilidade entre navegadores.    
+    </p>
+
+    <h2 id="navegador">Navegadores</h2>
+    <small><a href="#indice">(↑ voltar)</a></small>
+
+    <p>
+        Os navegadores ou browsers são softwares gratuitos que seguem os padrões W3C, mas possuem cada qual suas próprias particularidades. Tiveram início com o Mosaic, que passou para Netacape e hoje possuímos uma ampla variedade.
+    </p>
+
+    <h2 id="appWeb">Aplicação web</h2>
+    <small><a href="#indice">(↑ voltar)</a></small>
+
+    <p>
+        As aplicações são as aplicações que usam da internet como meio de comunicação ClienteXServer e não precisam de instalação. Os softwares que são instalados e os que não são instalados são diferentes, mesmo que ambos operem de forma igual; eles são de "mundos diferentes".
+    </p>
+
+    <h2 id="mobile">Dispositivos Móveis</h2>
+    <small><a href="#indice">(↑ voltar)</a></small>
+
+    <p>
+        Atualmente os dispositivos móveis como *Celulares, Laptop, Smartwatch* são extremamente populares e os usuários têm uma média de tempo utilizando estes dispositivoss elevada.
+    </p>
+
+    <h1 id="servidor"> O que são servidores </h1>
+    <small><a href="#indice">(↑ voltar)</a></small>
+
+    <p>
+        Servidores normalmente usam da internet para se conectar aos clientes, mas a internet não é o unico meio que poser ser usado como forma de comunicação pois eles ainda podem funcionar em rede local. Tendem a ser mais robustos, e podem ser de diferentes tipos como de arquivos, firewall, streaming, e-mail e web.
+    </p>
+
+    <h2 id="soft">Software</h2>
+    <small><a href="#indice">(↑ voltar)</a></small>
+
+    <p>
+        Em grande parte o Sistemas Operacionais dos servidores são distribuições linux como Ubuntu, Debian, Fedora entre outros, mas existem algusn que são Windows Server. Os servidores web mais usados não o Nginx e o Apache.
+    </p>
+
+    <h2 id="tipos">Tipos de servidores</h2>
+    <small><a href="#indice">(↑ voltar)</a></small>
+
+    <h3 id="proxy">Proxy</h3>
+    <p>
+        Antes de o cliente acessar a internet o servidor de proxy valida o acesso ao site.
+    </p>
+
+    <h3 id="firewall">Firewall</h3>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <p>
+        O firewall funciona de uma maneira contrária ao proxy ele valida as entradas externas vindas da internet.
+    </p>
+
+    <h3 id="webServer">Web server</h3>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <p>
+        Essa seria a representação de como funciona o acesso a um site.
+    </p>
+
+    <h3 id="mailServer">Mail server</h3>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <p>
+        Faz o armazenamento e gerenciamento de e-mail.
+    </p>
+
+    <h2 id="dbServer">Database Server</h2>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <p>
+        É um servidor onde ficam armazenadas as informações e é acessível por outro computador.
+    </p>
+
+    <h3 id="dns">DNS</h3>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <p>
+        O DNS converte o endereço URL de um site em endereço IP facilitando o acesso de sites.
+    </p> 
+
+    <h2 id="hospedagem">Hospedagem de site</h2>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <p>
+        Após a conclusão do desenvolvimento de um site e tendo um domínio de preferência, fazemos o upload dos arquivos do site desenvolvido para o servidor, para realizar essa operação usamos do protocolo <abbr title="File Transfer Protocol">FTP</abbr> que envia e recebe arquivos.
+    </p>
+
+   <h1 id="linguagem">Linguagem de programação</h1>
+   <small><a href="#indice">(↑ voltar)</a></small>
+
+    <h2 id="qlinguagem">O que é</h3>
+        <p>
+            é um conjunto de intruções ao computador que o execulta passo a passo como uma receita de bolo.
+        </p>
+    <h3 id="linguagemServer"> Server-side </h3>    
+    <p>
+        PHP, Ruby, Java, JavaScript, C#
+    </p>
+
+    <h id="linguagemCliente"> Client-side </h3>
+    <p>
+        JavaScript, Python
+    </p>
+
+    <blockquote> 
+        <font color="red"><strong><abbr title="Hypertext Markup Language">HTML</abbr></strong></font> não é linguagem de programação ela é um linguagem de marcação que usa de delimitadores para "<strong>informar</strong>" ao navegador o que fazer, e cada delimitador tem uma função.
+    </blockquote>
+
+
+    <h2 id="ferramentas">Ferramentas</h2>
+    <small><a href="#indice">(↑ voltar)</a></small>
+
+    <h3 id="notepad">Notepad++</h3>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Notepad%2B%2B_Logo.svg/1200px-Notepad%2B%2B_Logo.svg.png" alt="notepad++" width="250">
+    <ul>
+        <li>Desenvolvido por Don Ho</li>
+        <li>Lançado em 24 de novembro de 2003</li>
+    </ul>
+
+    <h3 id="sublime">Sublime Text</h3>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs4RBWPqtBJzNiKbcfAdluPdSm82riKecDvfwS5EzGyofdusmRpIlwjGf2-t_p9CeJX3Q&usqp=CAU" alt="Sublime Text" width="100">
+    <ul>
+        <li>Desenvolvido por Jon Skinner</li>
+        <li>Lançamento em 18 de janeiro de 2008</li>
+    </ul>
+
+    <h3 id="code">Visual Studio Code</h3>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <img src="https://www.tmssoftware.com/images/visualstudiocodelogo.png" alt="Visual Studio Code" width="250">
+    <ul>
+        <li>Desenvolvido pela Microsoft</li>
+        <li>Lançado em 29 de abril de 2015</li>
+    </ul>
+
+    <h2 id="estrutura">Estrutura Básica do <abbr title="Hypertext Markup Language">HTML</abbr></h2>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <p>
+        Um arquivo <i><abbr title="Hypertext Markup Language">HTML</abbr></i> é dividido em 3 partes. A primeira é a tag <code>html</code>, que delimita os elementos <abbr title="Hypertext Markup Language">HTML</abbr> (tags) e é o "primeiro nível". As outras duas partes estão no mesmo nível, mas a primeira a ser carregada pelo navegador é a <code>head</code>, que contém informações sobre o documento, mas não é visível aos usuários. A última parte visível para o usuário é o <code>body</code>.
+    </p>
+    <ul style="list-style: none;">
+        <li>&lt;html&gt;
+            <ul style="list-style: none;">
+                <li>&lt;head&gt;</li>
+                <li>&lt;/head&gt;</li>
+                <li>&lt;body&gt;</li>
+                <li>&lt;/body&gt;</li>
+            </ul>
+        </li>
+        <li>&lt;/html&gt;</li>
+    </ul>
+
+    <h2 id="tags">Falando sobre tags</h2>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <p>
+        Para a construção de uma página <abbr title="Hypertext Markup Language">HTML</abbr>, é possível encontrar uma grande quantidade de tags <abbr title="Hypertext Markup Language">HTML</abbr>, cada uma com sua funcionalidade específica. Algumas delas são:
+        <br><br>
+        <ul>
+            <li><strong>h1 até h6:</strong> Tags usadas para títulos</li>
+            <li><strong>p:</strong> Tag usada para delimitar um parágrafo</li>
+            <li><strong>i:</strong> Aplica itálico a um texto</li>
+            <li><strong>b ou strong:</strong> Aplica negrito a um texto</li>
+            <li><strong>u:</strong> Aplica sublinhado</li>
+            <li><strong>input:</strong> Gera um campo de entrada de algum tipo de valor determinado pelo atributo type</li>
+            <li><strong>img:</strong> Gera uma imagem que pode ser da internet ou do computador</li>
+            <li><strong>ol e ul:</strong> Tags que delimitam uma lista ordenada ou não ordenada</li>
+            <li><strong>li:</strong> Identifica um item da lista</li>
+            <li><strong>blockquote:</strong> Delimita uma citação em um texto</li>
+            <li><strong>a:</strong> Identifica um link</li>
+            <li><strong>mark:</strong> Cria uma marcação semelhante à marca texto</li>
+            <li><strong>small:</strong> Diminui o tamanho de um texto</li>
+            <li><strong>sub:</strong> Faz com que um determinado texto fique subscrito</li>
+            <li><strong>sup:</strong> Faz com que um determinado texto fique sobescrito</li>
+            <li><strong>font:</strong> É uma forma de alterar e definir uma font/texto em questão de tamanho e cor</li>
+            <li><strong>del:</strong> Faz com que o texto fique com uma linha atravez dele</li>
+            <li><strong>abbr:</strong> Usado em Siglas e abriviações para fornecer uma descrição com o atributo title </li>
+            
+        </ul>
+    </p>
+
+    <h3 id="atributos">Atributos</h3>
+    <small><a href="#indice">(↑ voltar)</a></small>
+    <ul>
+        <li><strong>id:</strong> Atributo usado para a identificação dos elementos</li>
+        <li><strong>style:</strong> Aplica estilo css diretamente em um atributo</li>
+        <li><strong>class:</strong> liga um ou mais elementos a um estilo formatado no css</li>
+        <li><strong>type:</strong> é usado junto do input para determinar o tipo de input que será usado</li>
+        <li><strong>src:</strong> determina a origem de um arquivo de áudio, vídeo ou imagem</li>
+        <li><strong>width:</strong> define a largura do elemento/li>
+        <li><strong>href:</strong> determina o destino do link</li>
+        <li><strong>title:</strong> apresenta  informações adicionais quando o usuário passa o mouse sobre o elemento</li>
+        <li><strong>target:</strong> é usando junto de um link e diz como vai ser aberto, se será em uma nova janela "_blanck" ou guia "_"</li>
+        <li><strong>size:</strong> usado com a tag font para alterar o tamanho de um texto</li>
+        <li><strong>color:</strong> usado com a tag font para alterar a cor de um texto </li>
+    </ul>
+
+</body>
+</html>
