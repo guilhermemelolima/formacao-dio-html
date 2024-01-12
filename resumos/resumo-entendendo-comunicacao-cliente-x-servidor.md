@@ -58,7 +58,7 @@ Em 1989, Tim Berners-Lee uniu o TCP/IP e hipertexto para desenvolver a WWW (Worl
 ## Cliente na Web
 ```mermaid
 flowchart LR
-    ClienteDesk(cliente - fas:fa-desktop) & ClienteLap(Cliente - fa:fa-laptop) & ClientePhone(Cliente - fas:fa-tablet-alt) <-.-> internet(Internet fas:fa-network-wired \ http) <-.-> Server(Server \ Site hospedado)
+    ClienteDesk(cliente - fas:fa-desktop) & ClienteLap(Cliente - fa:fa-laptop) & ClientePhone(Cliente - fas:fa-tablet-alt) <-.-> internet(Internet fas:fa-wifi \ http) <-.-> Server(Server fas:fa-server \ Site hospedado)
 ```
 
 O cliente é o dispositivo que está comunicando uma informação da internet, a qual está presente em outro computador (Servidor). O cliente vai para a internet, que busca arquivos como HTML, CSS, JavaScript, imagens, entre outros, no servidor que retorna ao cliente os arquivos que ficam armazenados na máquina na forma de cache. Os usuários utilizam uma grande quantidade de dispositivos que possuem tamanhos diferentes, o que torna importante levar em consideração o desenvolvimento de um design responsivo. Outro ponto para levar em consideração é a compatibilidade entre navegadores.
@@ -71,12 +71,149 @@ Os navegadores ou browsers são softwares gratuitos que seguem os padrões W3C, 
 
 ```mermaid
 flowchart LR
-    ClientePhone(Cliente fas:fa-tablet-alt) <-.-> internet(Internet fas:fa-network-wired) <-.-> Server(Server) <-.-> db(Banco de dados)
+    ClientePhone(Cliente fas:fa-tablet-alt) <-.-> internet(Internet fas:fa-wifi) <-.-> Server(Server fas:fa-server) <-.-> db(Banco de dados)
 ```
 
 As aplicações são as aplicações que usam da internet como meio de comunicação ClienteXServer e não precisam de instalação. Os softwares que são instalados e os que não são instalados são diferentes, mesmo que ambos operem de forma igual; eles são de "mundos diferentes".
 
 ## Dispositivos Móveis
 
-Atualmente os dispositivos móveis como *Celulares, Laptop, Smartwatch* são extremamente populares e os usuários tem uma média de tempo utilizando estes dispositivoss elevada.
+Atualmente os dispositivos móveis como *Celulares, Laptop, Smartwatch* são extremamente populares e os usuários têm uma média de tempo utilizando estes dispositivoss elevada.
 
+# O QUE SÃO SERVIDORES
+
+```Mermid
+flowchart LR
+    Cliente(Cliente)<-.->Internet(Internet fas:fa-wifi)<-.->Servidor(Servidor fas:fa-server)
+```
+
+```Mermid
+flowchart LR
+    Cliente(Cliente)<-.->Lan(Lan fas:fa-network-wired)<-.->Servidor(Servidor fas:fa-server)
+```
+
+Servidores normalmente usam da internet para se conectar aos clientes, mas a internet não é o unico meio que poser ser usado como forma de comunicação pois eles ainda podem funcionar em rede local. Tendem a ser mais robustos, e podem ser de diferentes tipos como de arquivos, firewall, streaming, e-mail e web.
+
+## Software
+
+Em grande parte o Sistemas Operacionais dos servidores são distribuições linux como Ubuntu, Debian, Fedora entre outros, mas existem algusn que são Windows Server. Os servidores web mais usados não o Nginx e o Apache.
+
+```Mermid
+flowchart LR
+    subgraph Servidor
+        direction TB
+        OS[Ubuntu] -.-> Server[Nginx]
+    end
+    Cliente -. Requisição HTPP .-> Servidor 
+    Servidor -. HTML,CSS,JS,Img .-> Cliente
+```
+
+## Tipos de servidores
+
+### Proxy
+```Mermaid
+flowchart LR
+    subgraph Cliente
+        direction LR
+        Smartphone
+        Laptop
+        Desktop
+    end
+    Cliente<-->Proxy
+    Proxy<-->Internet
+    Internet<-->Servidor
+```
+- Antes de o cliente acessar a internet o servidor de proxy valida o acesso ao site.
+
+
+### Firewall
+```Mermaid
+flowchart LR
+    subgraph Cliente
+        direction LR
+        Smartphone
+        Laptop
+        Desktop
+    end
+    Cliente<-->Firewall
+    Firewall<-->Internet
+    Internet<-->Servidor
+```
+- O firewall funciona de uma maneira contrária ao proxy ele valida as entradas externas vindas da internet.
+
+### Web server
+```Mermaid
+flowchart LR
+    subgraph Cliente
+        direction LR
+        Smartphone
+        Laptop
+        Desktop
+    end
+    Cliente<-->Internet
+    Internet<-->WebServer
+```
+- Essa seria a representação de como funciona o acesso a um site.
+
+### Mail server
+```Mermaid
+flowchart LR
+    subgraph Cliente
+        direction LR
+        Smartphone
+        Laptop
+        Desktop
+    end
+    Cliente<-->Internet
+    Internet<-->MailServer
+```
+- Faz o armazenamento e gerenciamento de e-mail.
+
+## Database Server
+```Mermaid
+flowchart LR
+    subgraph Cliente
+        direction LR
+        Smartphone
+        Laptop
+        Desktop
+    end
+    Cliente<-->Internet
+    Internet<-->WebServer
+    WebServer<-->DBServidor
+```
+- É um servidor onde ficam armazenadas as informações e é acessível por outro computador.
+
+### DNS
+```Mermaid
+flowchart LR
+    subgraph Cliente
+        direction LR
+        Smartphone
+        Laptop
+        Desktop
+    end
+    Cliente<-->DNS
+    DNS<-->Servidor
+```
+- O DNS converte o endereço URL de um site em endereço IP facilitando o acesso de sites. 
+
+## Hospedagem de site
+
+Após a conclusão do desenvolvimento de um site e tendo um domínio de preferência, fazemos o upload dos arquivos do site desenvolvido para o servidor, para realizar essa operação usamos do protocolo FTP que envia e recebe arquivos.
+
+# LINGUAGEM DE PROGRAMAÇÃO
+
+### O que é
+- é um conjunto de intruções ao computador que o execulta passo a passo como uma receita de bolo.
+
+#### Server-side    
+ - PHP, Ruby, Java, JavaScript, C#
+
+#### Client-side
+- JavaScript, Python
+
+<br>
+<blockquote> 
+    <font color="red"><strong>HTML</strong></font> não é linguagem de programação ela é um linguagem de marcação que usa de delimitadores para "<strong>informar</strong>" ao navegador o que fazer, e cada delimitador tem uma função.
+</blockquote>
