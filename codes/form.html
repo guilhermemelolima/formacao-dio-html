@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com formulário HTML</title>
+</head>
+<body>
+    <!--TAG FORM-->
+    <!--
+        name: é uma forma de identificar o campo para fazer validações posteriores no java script
+
+        form:
+            action: indica para onde os dados informados no form vão colocando o endereço do servidor, url, arquivo dentros arquivos do projeto
+            method: Forma de envio das informações
+                - GET: Envia pelo URL 
+                - POST: Envia por requisição ao servidor
+            target: Abre uma outra aba para execultar o envio das informações do form
+            autocomplete: Possibilita utilizar informações salvas como login, tendo o valor on e off
+            onsubmit: eventos que podem ser controlados por java script
+            on...(algumacoisa)
+
+        type: 
+         - text: aceita strings
+         - number: aceita apenas números
+         - password: esconde a string
+    -->
+    <form name="cadastro" autocomplete="off" onsubmit="alert('Enviado');" target="_blank" method="get" action="https://meusite.com.br/cadastro">
+        Nome: <input type="text" name="nome"><br>
+        Idadde: <input type="number" name="idade"><br>
+        Senha: <input type="password" name="senha"><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <br>
+    <hr>
+    <br>
+
+    <!--TAG INPUT-->
+    <!-- O input gera um campo de entrada com diversos tipos diferentes -->
+    <form>
+        <!--text - Entrada de texto/string-->
+        <label>Text: </label><input type="text"><br>
+        
+        <!--number - Entrada de números
+            min: Determina um valor minimo de entrada 
+            max: Determina um valor maximo de entrada
+            step: Faz com que o valor "pule" de acordo com o valor informado
+        -->
+        <label>Number: </label><input type="number" min="0" max="99" step="5"><br>
+        
+        <!--button funciona da mesma forma que a tag button-->
+        <label>Button: </label><input type="button" value="Enviar"><br>
+        
+        <!--range - Cria um campo scroll
+            Com os atributos min, max e value podemos controlar o valor dentro    
+        -->
+        <label>Range: </label><input type="range" min="0" max="100" value="10"><br>
+        
+        <!--Color - Gera um campo de seleção de cor-->
+        <label>Color: </label><input type="color"><br>
+        
+        <!--E-mail - faz com que seja preciso a presença do @-->
+        <label>E-mail: </label><input type="email"><br>
+
+        <!--URL - Faz com que o endereço url informado esteja completo com http://...-->
+        <label>URL: </label><input type="url"><br>
+
+        <!--Date - cria um campo de seleção de data-->
+        <label>Date: </label><input type="date"><br>
+
+        <!--Week - Gera um campo de seleção de semana, não funciona no fire fox-->
+        <label>Week: </label><input type="week"><br>
+
+        <!--Month - gera um campo de seleção de mês, não funciona no fire fox-->
+        <label>Month: </label><input type="month"><br>
+
+        <!--Checkbox - Gera um campo de seleção multiplo-->
+        <label>Checkbox: </label><input type="checkbox"><br>
+
+        <!--Checkbox - Gera um compo de seleção unico quando possuem o mesmo-->
+        <label>Radio: </label><input type="radio" name="radio"><input type="radio" name="radio"><br>
+
+        <!--Hidden - deixa uma informação escondida do user que é enviada junto da informações colocadas no form-->
+        <label>Hidden: </label><input type="hidden"><br>
+
+        <!--File - Torna possivel anexar arquivos no form
+        caso não tenha o multiple aceita apenas 1 arquivo-->
+        <label>File: </label><input type="file" multiple><br>
+
+        <!--Search - possibilita limpar o campo de busca, não funciona no firefox-->
+        <label>Search: </label><input type="search">
+
+        <br>
+        <hr>
+        <br>
+    </form>
+        <!--CHECKBOX & RADIO-->
+    <form method="post">
+        <h3>Você selecionu: Pizza de Calabresa</h3>
+            
+        <p>Quais opcionais você deseja ?</p>
+        <!--
+            * No checkbox atribuindo o mesmo nome quando enviarmos o form ele ira passar para o banco de dados apenas o ultimo valor para contornar isso o method dever ser post e o name do checkbox deve possuir colchete assim a linguagem de backend que fara a comunicação vai receber e poder tratar os valores recebidos como uma lista/vetor. 
+            ! exemplo em PHP- $opcional["queijo","cebola", "azeitona"]
+            ? o atributo disabled desabilita uma das opções 
+        -->
+        <input type="checkbox" name="opcionais[]" value="queijo"><label >+ queijo</label><br>
+        <input type="checkbox" name="opcionais[]" value="calabresa"><label >+ calabresa</label><br>
+        <input type="checkbox" name="opcionais[]" value="cebola"><label >+ cebola</label><br>
+        <input type="checkbox" disabled ="opcionais[]" value="azeitona"><label >+ azeitona</label><br>
+
+        <p>Borda recheada?</p>
+        <!--
+            * Para que os rabio funcionem o name dever ser o mesmo pois ele entende que apenas um radio deve ser selecionado dentre aqueles que possuem o mesmo name no caso abaixo o banckend ira receber sim ou não.
+        -->
+        <input type="radio" name="borda" value="sim"><label>Sim</label><br>
+        <input type="radio" name="borda" value="não"><label>Não</label><br>
+            
+        <p>Bebida</p>
+        <input type="radio" name="bebida" value="suco"><label>Suco</label><br>
+        <input type="radio" name="bebida" value="refrigerante"><label>Refrigerante</label><br>
+        <input type="radio" name="bebida" value="agua"><label>Água</label><br>
+        <input type="radio" name="bebida" value="nenhum"><label>nenhum</label><br> 
+            
+    </form>        
+    
+    <!--TAG BUTTON-->
+    <form onsubmit="alert('enviado');" method="get">       
+        <label>Nome: </label><input type="text"><br>
+        <label>Idade: </label><input type="text"><br>
+        <label>Password</label><input type="text"><br>
+
+        <!--
+            * usando button do tipo button ele fica sendo apenas um campo clicável que apenas ganha utilidade quando é aplicado javascript nete, no caso abaixo usamos os on para atribuir algumas ações nele
+        -->
+        <button type="button" onclick="alert('cliquei');" onmouseover="alert('passei');">clicável</button><br>
+
+        <!--
+            * o button reset limpar os campos do form o qual o button faz parte
+        -->
+        <button type="reset">limpar</button><br>
+
+        <!--
+            * envia as informações contidas no formulário
+            ? pode ganhar mais funcionalidade junto do javascript que pode execultar alguma outra ação usando o atributo onsubmit no form que ode realizar alguma ação antes ou depois do envio, como validação dos campos
+        -->
+        <button type="submit">enviar</button>
+    </form>
+
+
+    <!--TAG SELECT / COMBOBOX-->
+    <form method="get">
+        <label>Nome: </label><input type="text"><br>
+        <label>Cargo: </label>
+        <!--<select name="cargo" multiple> é possivel usar o atributo multiple-->
+        <select name="cargo"></select>
+            <option value="">Selecione um cargo</option>
+            <option value="administrativo">Administrativo</option>
+            <option value="gerenete">Gerente</option>
+            <option value="diretor">Diretor</option>
+            <option value="presidente">Presidente</option>
+        </select>
+        <br>
+        <label>Assunto: </label><input type="text"><br>
+        <button type="submit">enviar</button>
+    </form>
+
+    <!--TAG TEXTAREA-->
+    <form method="get">
+        <label>Nome: </label><input type="text"><br>
+        <label>Cargo: </label>
+        <select name="cargo"></select>
+            <option value="">Selecione um cargo</option>
+            <option value="administrativo">Administrativo</option>
+            <option value="gerenete">Gerente</option>
+            <option value="diretor">Diretor</option>
+            <option value="presidente">Presidente</option>
+        </select>
+        <br>
+        <label>Assunto: </label><input type="text"><br>
+        <!--
+            A tag textarea gera um campo que pode receber mais valores que o text normal, podemos mudar o tamanho dela com os atributos rows para linhas e cols para colunas
+        -->
+        <label>Mensagem: </label><textarea rows="5" cols="10" name="mensagem"></textarea>
+        <button type="submit">enviar</button>
+    </form>
+</body>
+</html>
