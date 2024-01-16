@@ -214,6 +214,6 @@ Após a conclusão do desenvolvimento de um site e tendo um domínio de preferê
 - JavaScript, Python
 
 <br>
-<blockquote> 
-    <font color="red"><strong>HTML</strong></font> não é linguagem de programação ela é um linguagem de marcação que usa de delimitadores para "<strong>informar</strong>" ao navegador o que fazer, e cada delimitador tem uma função.
-</blockquote>
+
+
+><font color="red">**HTML**</font> não é linguagem de programação ela é um linguagem de marcação que usa de delimitadores para "**informar**" ao navegador o que fazer, e cada delimitador tem uma função.
