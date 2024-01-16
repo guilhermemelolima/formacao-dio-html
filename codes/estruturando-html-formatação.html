@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Estrutura e formatação</title>
+        <style>
+            span{
+                font-weight: bold;
+                color: #ff0000;
+            }
+
+            .row{
+                margin: 5px;
+            }
+            label{
+                width: 100px;
+                text-align: right;
+                display: inline-block;
+                padding-right: 5px;
+            }
+            fieldset{
+                margin: 15px 0;
+                border-radius: 10px;
+                border-color: #ff0000;
+            }
+        </style>
+    </head>
+    <body>
+        <!--*Formatando textos-->
+        <p>
+            <!--
+                * PARTE 1
+                i(itálico) - destaca palavras regionais e cientificas
+                strong / b(negrito) - Deixa o texto mais escuro 
+                *semanticamente utilize o strong para caso o código for ser visto, pois o tornará mais legível caso o objetivo seja apenas deixar realmente o texto em negrito e não for ter o código visualizado podemos usar o b.
+                u(sublinhado) - Sublinha o testo
+                mark(marcação) - Faz com que o texto fique com aspecto de marca texto
+                sub - deixa o testo subscrito
+                sup - deixa o texto sobrescrito
+                blockquote - aplica um espaçamento ao texto
+            -->
+            <strong>Programação</strong><br>
+            <b>Programação</b><br>
+            <i>Programação</i><br>
+            <u>Programação</u><br>    
+            <mark>Programação</mark><br>
+            Programação<sup>1</sup><br>
+            Programação <sub>1</sub><br>
+            <blockquote>Programação</blockquote>
+
+
+            <!--
+                * PARTE 2
+                font - possibilita aplicar formatação a um texto
+                ? atributos:
+                    color - modifica a cor do texto
+                    face - modifica a font do texto "Arial", "times", "caliber". Podemos ainda colocar mais de uma fonte para o navegar buscar.
+            -->
+            <font color="red">Programação</font><br>
+            <font face="Arial">Programação</font><br>
+            <font face="'Trebuchet MS', tahoma">Programação</font><br>
+        </p>
+
+
+        <!--*DIV E SPAN-->
+        <!--
+            Div - é uma tag usada para delimitar e separar as diferentes partes em um site. Ele tem por característica ser do tipo display-block assim ocupando um bloco horizontal  
+        -->
+        <div id="menu-lateral">
+            <div id="links">
+                <li><a href="">link1</a></li>
+                <li><a href="">link2</a></li>
+                <li><a href="">link3</a></li>
+            </div>
+        </div>
+
+        <!--Span - diferente da tag div ela não quebra o texto, pois não possui o valor display-block-->
+        <p>
+            <div>div.</div>div<br>
+            <span>span.</span>span
+        </p>
+
+
+        <!--*FIELDSET-->
+        <!--
+            fieldset - delimita de forma visual um formulário
+            legend - atribui uma legenda ao fieldset
+        -->
+        <h1>Formulário de Cadastro</h1>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <div class="row">
+                <label>Nome:</label><input type="text">
+                <label>E-mail:</label><input type="text">
+            </div>
+
+            <div class="row">
+                <label>Profissão:</label><input type="text">
+                <label>Empresa:</label><input type="text">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Endereço</legend>
+            <div class="row">
+                <label>Endereço:</label><input type="text">
+                <label>Número:</label><input type="text">
+            </div>
+
+            <div class="row">
+                <label>Bairro:</label><input type="text">
+            </div>
+
+            <div class="row">
+                <label>Cidade/UF:</label><input type="text">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informações de contato</legend>
+            <div class="row">
+                <label>Celular:</label><input type="text">
+                <label>Whtsapp:</label><input type="text">
+            </div>
+            <div class="row">
+                <label>Linkedin:</label><input type="text">
+                <label>Github:</label><input type="text">
+            </div>
+        </fieldset>
+
+        <div class="row">
+            <button type="reset">
+                Limpar
+            </buton>
+            <button type="submit">
+                Enviar
+            </button>
+        </div>
+
+        <!--*EMBEDS E IFRAMES-->
+        <!--
+            embeds é uma antiga forma de carregar mídia de forma mais assíncrona sem pesar no conteúdo em geral do site e carregar plugins instalados no navegador, muito usada na construção de sites antigamente.
+
+            iframes carregam o conteúdo de outro site abrindo uma "janela""
+        -->
+
+        <iframe width="560" height="560" src="https://www.youtube.com/embed/XWGx6BG-xMI?si=p87fAT9fxWmiybQS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <iframe src="http://dio.me" width="560" height="560"></iframe>
+
+        <!--*RESENHA SOBRE CORES-->
+        <!--
+            Os navegadores aceitam aproximadamente nomes de 140 cores 
+            https://www.w3schools.com/tags/ref_colornames.asp
+            https://w3schools.com/colors/colors_hsl.asp
+
+            RGB - Combinação de Vermelho, Verde e Azul (Red, Green, Blue)
+            HEX - Combinação de Vermelho, Verde e Azul, mas descrito em Hexadecimal
+            HSL - Matriz(Hue), Saturação(Saturation) e Iluminação(lighten). A matriz tem os valores on 0 é vermelho, 120 verde, 240 azul.
+            RGBA - Mesmo que RGB, porém adiciona canal alpha (transparência)
+            HSLA - Mesmo que HSL, porém adiciona canal Alpha (transparência)
+
+            Hexadecimal
+            0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+            0,1,2,3,4,5,6,7,8,9, A, B, C, D, E, F
+            (VERMELHO,VERDE,AZUL) #RRGGBB -> #FF0000 -> 255 0 0
+
+            #ff0000 - vermelho
+            #0000FF - azul
+
+            rgba(255, 0, 0, 0.9) - vermelho
+            rgb(255, 0, 0) - vermelho
+            rgb(0, 0, 255) - azul
+            
+            hsla(240, 50%, 60%,0.9)
+            hsl(240, 50%, 60%)
+            
+        -->
+    </body>
+</html>
