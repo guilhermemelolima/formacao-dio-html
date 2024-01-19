@@ -1,0 +1,123 @@
+* {
+    
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: #ff634783;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+.wrapper {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+
+/*MENU*/
+.menu {
+    width: 15%;
+    padding: 10px 20px 0px;
+    text-align: center;
+}
+.menu ul {
+    list-style: none;
+    margin-left: 22%;
+}
+.menu li {
+    padding: 10% 0 10% 0;
+    width: 100px;
+    font-size: 1.8em
+}
+
+.menu a:hover{
+ background-color: black;
+ color: white;;
+}
+
+#select {
+ background-color: chartreuse;
+ color: #000000;
+}
+
+.main {
+    display: flex;
+    flex-flow: column;
+    width: 85%;
+}
+
+
+/*HEADER*/
+.header {
+    background-color: #6347ff83;
+    min-height: 150px;
+    padding: 20px 0 0 20px;
+}
+
+/*CONTENT*/
+.content {
+    background-color: #f5eeee;
+    min-height: 400px;
+    padding: 20px;
+}
+
+#linkContato a{
+    color: rgb(124, 43, 253);
+    font-size: 1.5em;
+}
+#tabHor{
+    border: dashed 3px rgba(30,80,90,0.9);
+    text-align: center;
+}
+
+fieldset{
+    width: 30%;
+    border-radius: 10px;
+    border-color: #775dee62;
+}
+form{
+    margin: 0 0 0 35%;
+    padding: 10px;
+    text-align: center;
+}
+.content #sobre{
+    text-align: justify;
+    
+}
+#tel{
+    margin-top: 0;
+}
+
+#index{
+    text-align: justify;
+    font-size: 1.3em;
+}
+/*FOOTER*/
+.footer {
+    background-color: #47ff6383;
+    min-height: 150px;
+    padding: 20px;
+    text-align: center;
+}
+
+#redeSocial{
+    list-style: none;
+}
+
+.footer h2{
+    margin:0 0 20px 0;
+}
+.footer li{
+    padding: 5px ;
+}
+
+#redeSocial a{
+    color: #000000;
+}
+#redeSocial a:hover{
+    background-color: blueviolet;
+}
